@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --peach: #F59B7E;
+    --pink: #C30075;
+}
+h1{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 3rem;
+}
+p{
+    text-indent: 20px;
+}
+img{
+    object-fit: cover;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+}
+header{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+.content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.saudation{
+    margin-left: 200px;
+    margin-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.saudation h2{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 2rem;
+    margin-bottom: -60px;
+}
+.saudation h1{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.saudation .emilyGif{
+    height: 200px;
+    width: 200px;
+    position: inherit;
+    margin-left: 15px;
+}
+.saudation p{
+    font-weight: 300;
+    font-size: 2rem;
+    text-shadow: 1px 1px rgba(211, 211, 211, 0.584);
+    margin-top: -50px;
+    text-indent: 0;
+}
+.saudation span{
+    font-weight: 600;
+}
+#emilyComin{
+    width: 500px;
+    right: 0;
+    margin-right: 200px;
+}
+.content img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+.experience{
+    padding: 60px;
+    height: 100vh;
+    position: relative;
+    background-color: var(--peach); 
+}
+.servicesCards{
+    display: flex;
+    gap: 25px;
+    justify-content: space-around;
+    padding: 30px;
+    line-height: 1.25rem;
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    width: 280px;
+    background-color: rgba(226, 226, 226, 0.332);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.service li{
+    list-style-type: none;
+}
+.service > h2{
+   font-size: 1.25rem;
+   text-align: center;
+}
+.about{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 50px;
+    height: 100vh;
+}
+.textAboutMe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+.textAboutMe p{
+    padding: 40px;
+    width: 600px;
+    font-size: 1.25rem;
+}
+.tecnologyContent{
+    display: flex;
+    gap: 15px;
+}
+.tecnology{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+}
+.webProjects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* ----------------PROJETOS REAIS------------- */
+.realProjects{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.project{
+    border-radius: 20px;
+    margin: 30px;
+    padding: 20px;
+    gap: 15px;
+}
+.project img{
+    width: 300px;
+}
+.realProjects button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 500ms ease;
+}
+.realProjects button:hover{
+    transform: scale(1.2);
+}
+.realProjects button >img{
+    width: 400px;
+}
+.webProjects dialog{
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    position: fixed;
+    padding: 10px;
+    vertical-align: middle;
+}
+.webProjects dialog::backdrop{
+   backdrop-filter: blur(4px);
+}
+dialog > img{
+    width: 80%;
+    height: 80%;
+}
+.modalContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    border: solid lime;
+    width: 100%;
+    background-color: rgb(25, 43, 58);
+    color: #fff;
+}
+.modalContent button{
+    width: 200px;
+    padding: 10px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    border: none;
+    transition: all 500ms ease;
+   
+}
+.modalContent button:hover{
+    cursor: pointer;
+    box-shadow: rgba(230, 226, 226, 0.16) 0px 3px 6px, rgba(241, 238, 238, 0.23) 0px 3px 6px;
+}
+#closeButton, #closeButtonAgromari {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 0px;
+    font-size: 3rem;
+}
