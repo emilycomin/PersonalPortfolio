@@ -148,13 +148,16 @@ header{
     align-items: center;
     font-size: 0.75rem;
 }
+
+/* ----------------PROJETOS REAIS------------- */
 .webProjects{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #F59B7E;
+    gap: 20px;
 }
-/* ----------------PROJETOS REAIS------------- */
 .realProjects{
     display: flex;
     justify-content: space-evenly;
@@ -162,14 +165,11 @@ header{
 }
 .project{
     border-radius: 20px;
-    margin: 30px;
-    padding: 20px;
-    gap: 15px;
 }
 .project img{
     width: 300px;
 }
-.realProjects button{
+.webProjects button{
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -180,10 +180,10 @@ header{
     justify-content: center;
     transition: all 500ms ease;
 }
-.realProjects button:hover{
+.webProjects button:hover{
     transform: scale(1.2);
 }
-.realProjects button >img{
+.webProjects button >img{
     width: 400px;
 }
 .webProjects dialog{
@@ -234,4 +234,10 @@ dialog > img{
     right: 0;
     top: 0px;
     font-size: 3rem;
+}
+/* -----------Projetos ACADÊMICOS---------- */
+.academyProjects{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }

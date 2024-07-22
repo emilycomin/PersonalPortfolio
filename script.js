@@ -15,6 +15,7 @@ window.addEventListener('scroll', () => {
 
 var modalReviva = document.getElementById("modalReviva");
 var modalAgromari = document.getElementById("modalAgromari");
+var modalDhouse = document.getElementById("modalDhouse");
 
     // O botão Update abre uma Dialog
     document.getElementById("openButton").onclick = (e) => {
@@ -25,7 +26,7 @@ var modalAgromari = document.getElementById("modalAgromari");
         e.preventDefault();
         modalReviva.close();
     }
-    document.getElementById("openButtonAgromari").onclick = (e)=>{
+    document.getElementById("openButtonAgromari").onclick = (e) => {
         e.preventDefault();
         modalAgromari.showModal();
     }
@@ -33,6 +34,13 @@ var modalAgromari = document.getElementById("modalAgromari");
         e.preventDefault();
         modalAgromari.close();
     }
-
+    document.getElementById("openModalDhouse").onclick = (e) => {
+        e.preventDefault();
+        modalDhouse.showModal();
+    }
+    document.getElementById("closeButtonDhouse").onclick = (e) => {
+        e.preventDefault();
+        modalDhouse.close();
+    }
 
     
