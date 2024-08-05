@@ -8,9 +8,8 @@ window.addEventListener('scroll', () => {
     let value = window.scrollY;
     saudation.style.marginTop = value * 1.5 + 'px';
     emilyComin.style.right = value * -1.0 + 'px';
-    // emilyComin.style.top = value * -1.0 + 'px';
-    // wave40.style.bottom = value * 0.5 + 'px';
-    wave40.style.bottom = value * -.5 + 'px'
+    wave70.style.bottom = value * - .3 + 'px';
+    wave40.style.bottom = value * -1 + 'px'
 })
 
 var modalReviva = document.getElementById("modalReviva");
