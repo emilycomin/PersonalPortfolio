@@ -318,7 +318,10 @@ footer i{
     margin-right: 24px;
 }
 @media screen and (max-width: 600px) { 
-   .homeContent #emilyComin{
+   body{
+        overflow-x: hidden;  
+    } 
+    .homeContent #emilyComin{
     height: 400px;
     bottom: 20px;
     right: 0;
