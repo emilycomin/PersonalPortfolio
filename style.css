@@ -12,28 +12,26 @@
     --lavender-blush: #F7F2F4;
     --tyrian-purple: #4e0439;
 }
-h1{
+h1, .saudation h2{
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 3rem;
 }
 h2{
     font-size: 2rem;
 }
-img{
-    object-fit: cover;
-}
 p{
     line-height: 30px;
 }
 body{
-    overflow-x: hidden;
     font-family: 'Lato', sans-serif;
-    background-color: #faeeee;
+    overflow-x: hidden;
+}
+h1::selection, span::selection, p::selection, h2::selection{
+    background-color: var(--peach);
 }
 header{
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 400;
-    color: rgb(255, 255, 255);
     font-size: 1.75rem;
     display: flex;
     align-items: center;
@@ -41,59 +39,56 @@ header{
     position: absolute;
     top: 0;
     width: 100vw;
+    color: #fff;
 }
-.content{
-    position: relative;
+
+/* -------------------   HERO  -------------------------- */
+
+.homeContent .content{
     display: flex;
-    align-items: center;
     height: 100vh;
+    overflow-x: hidden;
 }
-.homeContent #wave70{
-    z-index: -1;
-}
-.contentLeft{
-    height: 50vh;
-    width: 50%;
-    margin-bottom: 15%;
-    display: flex;
-    justify-content: right;
-}
-.saudation{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.saudation h2{
-    font-family: "Bricolage Grotesque", sans-serif;
-}
-.saudation h1{
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-size: 4rem;
-    font-weight: 500;
-}
-.saudation p{
-    font-weight: 300;
-    font-size: 2rem;
-    text-shadow: 1px 1px rgba(211, 211, 211, 0.584);
-}
-.saudation span{
-    font-weight: 600;
-}
-#emilyComin{
-    width: 500px;
-    right: 0;
-    margin-right: 200px;
-}
-.content img{
+.homeContent .content img{
     position: absolute;
     bottom: 0;
     width: 100%;
     pointer-events: none;
 }
-/* ------------------  SERVIÇOS------------------- */
+.homeContent #emilyComin{
+    width: 500px;
+    right: 0;
+    margin-right: 150px;
+    object-fit: contain;
+}
+.saudation{
+    position: absolute;
+    bottom: 22.5vw;
+    left: 10%;
+}
+.saudation h2{
+    max-width: 25%;
+    backdrop-filter: blur(15px);
+}
+.saudation h1{
+    font-size: 4rem;
+    font-weight: 500;
+    backdrop-filter: blur(15px);
+}
+.saudation span{
+    font-weight: 600;
+}
+.saudation p{
+    font-size: 2rem;
+    font-weight: 300;
+    backdrop-filter: blur(15px);
+    text-shadow: 1px 1px rgba(211, 211, 211, 0.584);
+}
+
+/* -------------------  SERVIÇOS------------------- */
 .experience{
     padding: 60px;
-    height: 100vh;
+    height: auto;
     position: relative;
     background-image: linear-gradient(to bottom, #f59b7f, #f6a187, #f7a88f, #f7ae97, #f8b49f, #f9bba8, #fac1b1, #fac8ba, #fbd1c6, #fcdbd2, #fde4de, #fdeeea,#FFFBF8, #FFFCFA, #fff); 
 }
@@ -135,27 +130,22 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 26px;
+    height: auto;
     padding: 100px 0;
     position: relative;
     background-color: #F7F2F4;
 }
 .aboutMe{
     display: flex;
-    justify-content: flex-end;
+    gap: 10px;
     background-color: rgba(228, 226, 226, 0.785);
     border-radius: 20px;
-    width: 70%;
-    position: relative;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .aboutMe img{
     height: 500px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    align-self: flex-end;
+    align-self: center;
     border-radius: 0 0 0 20px;
-    margin-right: 0;
 }
 .textAboutMe{
     display: flex;
@@ -168,7 +158,7 @@ header{
 }
 .textAboutMe p{
     text-indent: 5%;
-    width: 600px;
+    max-width: 600px;
     font-size: 1rem;
     line-height: 30px;
 }
@@ -177,31 +167,13 @@ header{
     gap: 36px;
 }
 
-@keyframes techAnimation {
-	from {
-		transform: translateX(0px);
-	}
-
-	to {
-		transform: translateX(900px);
-	}
-}
-.tecnologyContent{
-    display: flex;
-    justify-content: space-between;
-    overflow-x: hidden;
-}
-.tecnology{
-    font-size: 0.75rem;
-}
-
 /* ----------------PROJETOS REAIS------------- */
 .projetos{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 24px;
+    padding: 12px 0;
     background-image: url(img/Background.png);
     background-size: cover;
     position: relative;
@@ -209,15 +181,12 @@ header{
 .projetosReais, .projetosAcademicos{
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 16px;
+    padding: 12px 0;
 }
 .projeto{
     display: flex;
     align-items: center;
-    margin: 0 200px;
-    padding: 0 12px;
-    gap: 154px;
     background-color: #f7f2f42f;
     backdrop-filter: blur(5px);
 }
@@ -233,26 +202,13 @@ header{
     flex-direction: row-reverse;
 }
 /* ------------------CONTATO----------------------- */
-@keyframes animationSquare {
-    from {
-        transform: translateX(-500px);
-    }
-
-    to{
-        transform: translateX(500px);
-    }
-}
 .contact{
     width: 100%;
     display: flex;
     z-index: 2;
     padding: 100px 0 ;
+    background-color: transparent;
 }
-/* .quadradoEsquerda{
-
-    background-image: linear-gradient(to right bottom, #ffbfb3, #f9b9b2, #f3b3b1, #edadb0, #e6a8af, #e0a4ae, #d99fac, #d29bab, #ca96a9, #c192a8, #b98da5, #b089a3);
-    background-image: linear-gradient(to right bottom, #fdbbe3, #febbdf, #ffbadb, #ffbad8, #ffbad4, #ffbad0, #ffbacc, #ffbac8, #ffbbc2, #ffbcbd, #ffbdb8, #ffbfb3);
-} */
 .googleAgenda, .botaoWhatsApp{
     display: flex;
     flex-direction: column;
@@ -294,10 +250,10 @@ header{
     height: 40px;
     width: 40px;
 }
-footer img{
+ footer img{
     position: absolute;
     z-index: -1;
-}
+ } 
 footer {
     height: 280px;
     display: flex;
@@ -312,31 +268,38 @@ footer i{
     font-size: 2rem;
     color: #4e0439;
     margin-right: 24px;
+} 
+footer .socialMedia{
+    margin-bottom: 24px;
 }
+
+
 @media screen and (max-width: 600px) { 
-    #emilyComin{
-        /* height: 400px;
-        bottom: 20px;
-        margin: 0 -100px;
-        object-fit: scale-down; */
-        display: none;
-   }
-   #wave40, #wave70{
-        height: 250px;
+     .content #emilyComin{
+        margin-right: -50px;
    }
    #wave100{
-        height: 150px;
-    }
-    .contentLeft{
-        width: 100%;
-    }
+    height: 200px;
+    object-fit: cover;
+   }
+    #wave40, #wave70{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+   }
     .saudation{
-        margin: 0;
-        flex-direction: column;
+        margin-bottom: 25px;
+        left: 0;
         width: 100%;
     }
-    .saudation p, h1, h2{
+    .saudation h1, .saudation h2, 
+    .saudation p{
         margin: 0;
+        background-color: #ffffff70;
+    } 
+    .saudation p{
+        width: 100%;
+        font-size: 1.5rem;
     }
     .experience{
         height: auto;
@@ -357,7 +320,7 @@ footer i{
     .projetos, .projetosReais, .projeto, #projetoreverse{
         flex-direction: column;
         justify-content: center;
-        margin: 30px 0;
+        margin: 0;
     }
     .projeto{
         width: 100%;
@@ -376,5 +339,11 @@ footer i{
     }
     .contact button{
         width: 100%;
+    }
+    footer .socialMedia {
+        z-index: 3;
+    }
+    footer img{
+        height: 200px;
     }
 }
