@@ -274,13 +274,14 @@ footer .socialMedia{
 }
 
 
-@media screen and (max-width: 600px) { 
-     .content #emilyComin{
+@media screen and (max-width: 600px) {
+    .content #emilyComin{
         margin-right: -50px;
    }
    #wave100{
+    width: auto;
     height: 200px;
-    object-fit: cover;
+    object-fit: fill;
    }
     #wave40, #wave70{
     height: 400px;
@@ -303,6 +304,7 @@ footer .socialMedia{
     }
     .experience{
         height: auto;
+        margin: 0;
     }
     .aboutMe, .about{
        flex-direction: column;
