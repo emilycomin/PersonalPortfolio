@@ -24,8 +24,8 @@ p{
 }
 body{
     font-family: 'Lato', sans-serif;
-    overflow-x: hidden;
 }
+
 h1::selection, span::selection, p::selection, h2::selection{
     background-color: var(--peach);
 }
@@ -47,19 +47,17 @@ header{
 .homeContent .content{
     display: flex;
     height: 100vh;
-    overflow-x: hidden;
 }
-.homeContent .content img{
+.content img{
     position: absolute;
-    bottom: 0;
+    bottom: -18px;
     width: 100%;
     pointer-events: none;
 }
 .homeContent #emilyComin{
     width: 500px;
+    position: absolute;
     right: 0;
-    margin-right: 150px;
-    object-fit: contain;
 }
 .saudation{
     position: absolute;
@@ -256,6 +254,7 @@ header{
  } 
 footer {
     height: 280px;
+    width: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -273,20 +272,8 @@ footer .socialMedia{
     margin-bottom: 24px;
 }
 
-
 @media screen and (max-width: 600px) {
-    .content #emilyComin{
-        margin-right: -50px;
-   }
-   #wave100{
-    width: auto;
-    height: 200px;
-   }
-    #wave40, #wave70{
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-   }
+
     .saudation{
         margin-bottom: 25px;
         left: 0;
@@ -303,7 +290,6 @@ footer .socialMedia{
     }
     .experience{
         height: auto;
-        margin: 0;
     }
     .aboutMe, .about{
        flex-direction: column;
@@ -345,6 +331,6 @@ footer .socialMedia{
         z-index: 3;
     }
     footer img{
-        height: 200px;
+        width: 100%;
     }
 }

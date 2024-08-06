@@ -5,8 +5,8 @@ let emilyComin = document.getElementById("emilyComin");
 
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
-    saudation.style.marginTop = value * 0.5 + 'px';
-    emilyComin.style.right = - value * 0.5 + 'px';
-    wave70.style.bottom = - value *0.2 + 'px';
-    wave40.style.bottom = - value + 'px';
+    saudation.style.marginBottom = - value * 1.5 + 'px';    
+    emilyComin.style.marginBottom =  value * - 0.6 + 'px';
+    wave70.style.bottom = - value * 0.5 + 'px';
+    wave40.style.bottom = - value * 1 + 'px';
 })
